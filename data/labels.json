@@ -1,0 +1,134 @@
+{
+  "labels": [
+    {
+      "id": "animal",
+      "display_name": "Animal",
+      "family": "living_thing",
+      "text_prompts": [
+        "a photo of an animal",
+        "an animal making a sound",
+        "a video showing an animal"
+      ],
+      "reference_title": "Generic animal example"
+    },
+    {
+      "id": "person",
+      "display_name": "Person",
+      "family": "living_thing",
+      "text_prompts": [
+        "a photo of a person",
+        "a person speaking",
+        "a video showing a person"
+      ],
+      "reference_title": "Generic person example"
+    },
+    {
+      "id": "vehicle",
+      "display_name": "Vehicle",
+      "family": "transport",
+      "text_prompts": [
+        "a photo of a vehicle",
+        "the sound of a vehicle engine",
+        "a video showing a vehicle"
+      ],
+      "reference_title": "Generic vehicle example"
+    },
+    {
+      "id": "indoor_scene",
+      "display_name": "Indoor scene",
+      "family": "scene",
+      "text_prompts": [
+        "an indoor room",
+        "the sound of activity inside a building",
+        "a video inside a room"
+      ],
+      "reference_title": "Generic indoor scene example"
+    },
+    {
+      "id": "outdoor_scene",
+      "display_name": "Outdoor scene",
+      "family": "scene",
+      "text_prompts": [
+        "an outdoor scene",
+        "the sound of wind and outdoor activity",
+        "a video outside"
+      ],
+      "reference_title": "Generic outdoor scene example"
+    },
+    {
+      "id": "document_or_screen",
+      "display_name": "Document or screen",
+      "family": "information_object",
+      "text_prompts": [
+        "a photo of a document or computer screen",
+        "someone reading a document aloud",
+        "a video showing a document or screen"
+      ],
+      "reference_title": "Generic document example"
+    },
+    {
+      "id": "music",
+      "display_name": "Music",
+      "family": "audio_event",
+      "text_prompts": [
+        "a musical instrument or music performance",
+        "music playing",
+        "a video of a music performance"
+      ],
+      "reference_title": "Generic music example"
+    },
+    {
+      "id": "speech",
+      "display_name": "Speech",
+      "family": "audio_event",
+      "text_prompts": [
+        "a person speaking",
+        "spoken words or conversation",
+        "a video with a person talking"
+      ],
+      "reference_title": "Generic speech example"
+    },
+    {
+      "id": "alarm_or_siren",
+      "display_name": "Alarm or siren",
+      "family": "audio_event",
+      "text_prompts": [
+        "a warning light or alarm device",
+        "the sound of an alarm or siren",
+        "a video showing an alarm or emergency signal"
+      ],
+      "reference_title": "Generic alarm example"
+    },
+    {
+      "id": "machinery",
+      "display_name": "Machinery",
+      "family": "object_or_sound",
+      "text_prompts": [
+        "industrial machinery",
+        "the sound of a machine running",
+        "a video of machinery operating"
+      ],
+      "reference_title": "Generic machinery example"
+    },
+    {
+      "id": "unknown",
+      "display_name": "Unknown / out of scope",
+      "family": "special_outcome",
+      "text_prompts": [
+        "an object or event outside the known categories",
+        "an unrelated sound outside the known categories"
+      ],
+      "reference_title": "Unknown rejection outcome"
+    },
+    {
+      "id": "uncertain",
+      "display_name": "Uncertain",
+      "family": "special_outcome",
+      "text_prompts": [
+        "unclear or ambiguous evidence",
+        "an input that cannot be classified reliably"
+      ],
+      "reference_title": "Uncertain outcome"
+    }
+  ]
+}

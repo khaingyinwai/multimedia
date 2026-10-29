@@ -1,0 +1,16 @@
+Checkpoint 2 validation (local build environment)
+
+$ python -m core.config
+CONFIG OK: Multimodal Recognition Prototype
+Mock mode: True
+Modalities configured: image, sound, speech, video, text
+
+$ python -m pytest -q
+...........
+11 passed in 1.49s
+
+$ python -m foundations.train_smoke --steps 2
+MiniViT: ran 2 steps; first_loss=2.4252; last_loss=1.7292; synthetic data only
+MiniAudioTransformer: ran 2 steps; first_loss=1.5692; last_loss=0.8405; synthetic data only
+
+Note: these are results from the build environment. Re-run in your GitHub Codespace. Synthetic smoke training checks that forward/backward passes work; it is not a real dataset evaluation.

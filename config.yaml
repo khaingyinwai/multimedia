@@ -1,0 +1,71 @@
+app:
+  name: "Multimodal Recognition Prototype"
+  environment: "development"
+  mock_mode: true
+  max_upload_mb: 25
+  cache_dir: ".cache/models"
+  data_dir: "data"
+  log_level: "INFO"
+
+models:
+  image:
+    provider_order: ["local_huggingface"]
+    model_id: "openai/clip-vit-large-patch14"
+    alternative_model_id: "openai/clip-vit-base-patch32"
+    enabled: true
+  sound:
+    provider_order: ["local_huggingface"]
+    model_id: "laion/larger_clap_general"
+    alternative_model_id: "laion/clap-htsat-fused"
+    enabled: true
+  speech:
+    provider_order: ["local_huggingface"]
+    model_id: "openai/whisper-tiny"
+    alternative_model_id: "openai/whisper-base"
+    enabled: true
+  video:
+    max_duration_seconds: 120
+    max_frames: 8
+    sample_strategy: "uniform"
+    enabled: true
+  text:
+    explanation_provider_order: ["template"]
+    max_explanation_words: 100
+    enabled: true
+
+fusion:
+  min_confidence: 0.30
+  uncertain_below: 0.35
+  top_k: 3
+  weights:
+    image: 1.0
+    sound: 1.0
+    speech: 0.8
+    video: 1.0
+    text: 0.6
+  agreement_bonus:
+    MATCH: 0.10
+    PARTIAL: 0.03
+    SINGLE_MODALITY: 0.00
+    CONFLICT: 0.00
+    UNCERTAIN: 0.00
+  reject_label_id: "unknown"
+  uncertain_label_id: "uncertain"
+
+rate_limits:
+  requests_per_minute: 10
+  daily_soft_limit: 100
+  provider_cooldown_seconds: 60
+  timeout_seconds: 60
+  retries_5xx: 2
+
+generators:
+  enabled: false
+  provider_order: []
+  max_output_words: 100
+
+evaluation:
+  labels_path: "data/labels.json"
+  golden_set_path: "eval/golden"
+  results_dir: "eval/results"
+  random_seed: 1729
